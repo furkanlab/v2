@@ -30,7 +30,8 @@ def process_lidar_data_sync():
                 distance = d[2]
 
                 if 20 <= angle <= 160:
-                    temp_scan_data.append({'angle': angle, 'distance': distance / 10})
+                    if (distance / 10) <= 200:
+                        temp_scan_data.append({'angle': angle, 'distance': distance / 10})
 
                 if last_angle is not None and abs((last_angle - d[1]) % 360) > 355:
                     with data_lock:
