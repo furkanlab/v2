@@ -98,3 +98,6 @@ if __name__ == '__main__':
         asyncio.run(main())
     except KeyboardInterrupt:
         print('Program interrupted')
+        lidar.stop()
+        lidar.stop_motor()
+        lidar.disconnect()
