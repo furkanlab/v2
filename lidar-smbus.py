@@ -1,4 +1,5 @@
 import smbus
+import asyncio
 from aiohttp import web
 import aiohttp_cors
 from rplidar import RPLidar, RPLidarException
