@@ -1,5 +1,4 @@
 smbus
-asyncio
 aiohttp
 aiohttp_cors
 rplidar
